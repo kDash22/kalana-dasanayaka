@@ -73,10 +73,10 @@ export const About = () => {
             </div>
 
             <div className="glass rounded-2xl p-6 glow-border animate-fade-in-slow animation-delay-300 ">
-              <p className="text-lg font-medium italic text-foreground">
-                To deepen my understanding of computer science by building
+              <p className="text-xl font-medium italic text-foreground">
+                "To deepen my understanding of computer science by building
                 systems that emphasize correctness, efficiency, and clean
-                design.
+                design."
               </p>{" "}
             </div>
           </div>
@@ -84,12 +84,18 @@ export const About = () => {
           {/* Right Column */}
           <div className="grid sm:grid-cols-2 gap-6">
             {highlights.map((item, index) => (
-              <div key={index} className="glass p-6 rounded-2xl animate-fade-in">
-                <div>
-                  <item.icon />
+              <div
+                key={index}
+                className="glass p-6 rounded-2xl animate-fade-in"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <div className="w-12 h-12 rounded-x bg-primary/10 flex items-center justify-center mb-4">
+                  <item.icon className="w-6 h-6 text-primary" />
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3 className="text-lg font-semibold mb-2 ">{item.title}</h3>
+                <p className="text-base text-muted-foreground">
+                  {item.description}
+                </p>
               </div>
             ))}
           </div>

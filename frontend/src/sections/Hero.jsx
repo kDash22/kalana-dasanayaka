@@ -6,7 +6,6 @@ import { ChevronDown } from "lucide-react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 
-
 const skills = [
   "Java",
   "Python",
@@ -55,7 +54,7 @@ export const Hero = () => {
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/*Left Col - dp */}
-          <div className="relative animate-fade-in-slow animation-delay-100">
+          <div className="relative lg:-translate-y-8 animate-fade-in-slow animation-delay-100">
             {/* Profile Image */}
             <div className="relative w-80 h-80 md mx-auto">
               <div
@@ -81,19 +80,19 @@ export const Hero = () => {
               </div>
             </div>
             <div>
-              <h1 className="text-center py-3 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight animate-fade-in-slow animation-delay-100">
+              <h1 className="text-center py-3 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight animate-fade-in-slow animation-delay-100">
                 Kalana Dasanayaka
               </h1>
               <div className="text-center">
                 <span
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-lg 
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-basic 
                 text-primary animate-fade-in-slow animation-delay-200"
                 >
                   <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                   Coding Enthusiast · Java & Python
                 </span>
               </div>
-              <p className="text-lg text-center mx-auto items-center text-muted-foreground max-w-lg animate-fade-in-slow animation-delay-300">
+              <p className="text-basic text-center mx-auto items-center text-muted-foreground max-w-lg animate-fade-in-slow animation-delay-300">
                 An ICT undergraduate interested in Java development and
                 algorithmic problem solving.
               </p>
