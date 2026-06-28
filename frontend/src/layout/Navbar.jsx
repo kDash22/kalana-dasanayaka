@@ -1,4 +1,4 @@
-import { Button } from "../component/Button";
+import { Button } from "../components/Button";
 import { Menu } from "lucide-react";
 
 const navLinks = [
@@ -21,7 +21,7 @@ export const Navbar = () => {
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-1">
-          <div className="glass rounded-full px-2 py-1 items-center gap-1">
+          <div className="glass flex rounded-full px-2 py-1 items-center gap-1">
             {navLinks.map((link, index) => (
               <a
                 href={link.href}
@@ -40,13 +40,23 @@ export const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md: hidden p-2 text-foreground">
-          <Menu size={24}/>
+        <button className="md:hidden p-2 text-foreground">
+          <Menu size={24} />
         </button>
 
         {/*Mobile menu */}
-        <div className="md:hidden">
-            
+        <div className="md:hidden glass-strong">
+          <div>
+            {navLinks.map((link, index) => (
+              <a
+                href={link.href}
+                key={index}
+                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-b-full hover:bg-surface"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </nav>
     </header>
