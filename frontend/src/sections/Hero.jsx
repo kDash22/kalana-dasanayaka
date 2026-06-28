@@ -2,6 +2,8 @@ import { Button } from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 import { ArrowRight } from "lucide-react";
 import { Download } from "lucide-react";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 export const Hero = () => {
   return (
@@ -17,9 +19,10 @@ export const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background/10 via-background/70 to-background"></div>
 
       {/* Green Dots */}
-      <div className="absoulute inset-0 overflow-hidden pointer-events-none">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {[...Array(80)].map((_, i) => (
           <div
+            key={i}
             className="absolute w-1.5 h-1.5 rounded-full opacity-60"
             style={{
               backgroundColor: "#20B2A6",
@@ -38,7 +41,7 @@ export const Hero = () => {
           {/*Left Col - text */}
           <div className="space-y-8">
             <div className="">
-              <span className="inline-flex items-center gap-2 px-4 py2 rounded-full glass text-sm text-primary animate-fade-in-slow">
+              <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in-slow">
                 <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
                 Coding Enthusiast · Java & Python
               </span>
@@ -49,14 +52,14 @@ export const Hero = () => {
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in-slow animation-delay-100">
                 Developing{" "}
                 <span className="text-primary glow-text">reliable</span>
-                <br /> soltuions with
+                <br /> solutions with
                 <br />{" "}
                 <span className="font-mono italic font-bold text-white">
                   precision
                 </span>{" "}
               </h1>
 
-              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in-slow animation-delay-300">
+              <p className="text-lg text-muted-foreground max-w-lg animate-fade-in-slow animation-delay-200">
                 Hi, I'm Kalana Dasanayaka, an ICT undergraduate focused on Java
                 development and algorithmic problem solving. I build
                 logic-driven systems like game engines and rule-based bots, with
@@ -66,7 +69,7 @@ export const Hero = () => {
             </div>
 
             {/* CTAs */}
-            <div className="flex items-center gap-4">
+            <div className="flex flex-wrap items-center gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
                 Contact Me
                 <ArrowRight className="w-5 h-5" />
@@ -76,8 +79,40 @@ export const Hero = () => {
                 Download CV
               </AnimatedBorderButton>
             </div>
+
+            {/* Social links */}
+            <div className="flex items-center gap-4 animate-fade-in animation-delay-400">
+              <span className="text-sm text-muted-foreground">Follow me: </span>
+              {[
+                { icon: FaGithub, href: "https://github.com/kDash22" },
+                {
+                  icon: FaLinkedin,
+                  href: "https://www.linkedin.com/in/kalana-dasanayaka-ab3524407/",
+                },
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                >
+                  {<social.icon className="w-5 h-5" />}
+                </a>
+              ))}
+            </div>
           </div>
           {/*Right Col - dp */}
+          <div className="relative animate-fade-in-slow animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div className="relative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/placeholder.jpg"
+                  alt="Kalana Dasanayaka"
+                  className="w-full aspect-[4/5] object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
