@@ -108,7 +108,7 @@ export const Hero = () => {
                 <span className="text-primary glow-text">reliable</span>
                 <br /> solutions with
                 <br />{" "}
-                <span className="font-mono italic font-bold text-white">
+                <span className="font-serif italic font-bold text-white">
                   precision
                 </span>{" "}
               </h1>

@@ -7,7 +7,7 @@ const navLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
   { href: "#experience", label: "Experience" },
-  { href: "#testimonials", label: "Testimonials" },
+  /*{ href: "#testimonials", label: "Testimonials" } */
 ];
 
 export const Navbar = () => {
@@ -32,7 +32,7 @@ export const Navbar = () => {
       <nav className="container mx-auto px-6 flex items-center justify-between">
         <a
           href="#"
-          className="text-xl font-bold tracking-tight hover:text-primary"
+          className="text-2xl font-bold tracking-tight hover:text-primary"
         >
           K-22<span className="text-primary">.</span>
         </a>
@@ -44,7 +44,7 @@ export const Navbar = () => {
               <a
                 href={link.href}
                 key={index}
-                className="px-4 py-2 text-sm text-muted-foreground hover:text-foreground rounded-b-full hover:bg-surface"
+                className="px-4 py-2 text-lg text-muted-foreground hover:text-foreground rounded-b-full hover:bg-surface"
               >
                 {link.label}
               </a>
@@ -54,7 +54,9 @@ export const Navbar = () => {
 
         {/* CTA button */}
         <div className="hidden md:block">
-          <Button size="sm">Contact Me</Button>
+          <a href="#contact">
+            <Button>Contact Me</Button>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
