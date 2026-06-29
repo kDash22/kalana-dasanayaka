@@ -1,7 +1,7 @@
 const experiences = [
   {
     period: "2025 - Present",
-    role: "Undergraduate Student BSc in ICT(general)",
+    role: "Undergraduate Student, BSc in ICT(general)",
     company: "University of Sri Jayewardenepura",
     description: " ",
     technologies: [" "],
