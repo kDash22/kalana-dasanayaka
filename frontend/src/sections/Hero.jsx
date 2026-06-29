@@ -63,7 +63,7 @@ export const Hero = () => {
               />
               <div className="relative glass rounded-full p-2 glow-border">
                 <img
-                  src="/profile-photo.jpeg"
+                  src={`${import.meta.env.BASE_URL}profile-photo.jpeg`}
                   alt="Kalana Dasanayaka"
                   className="w-full h-full object-cover rounded-full aspect-square"
                 />
