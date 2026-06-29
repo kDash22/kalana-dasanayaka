@@ -127,10 +127,12 @@ export const Hero = () => {
                 Contact Me
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <AnimatedBorderButton>
-                <Download className="w-5 h-5" />
-                Download CV
-              </AnimatedBorderButton>
+              <a href="https://drive.google.com/file/d/1q1Ix9zoUzLiHsGF30FK7n9spZizW-cA0/view?usp=sharing">
+                <AnimatedBorderButton>
+                  <Download className="w-5 h-5" />
+                  Download CV
+                </AnimatedBorderButton>
+              </a>
             </div>
 
             {/* Social links */}
