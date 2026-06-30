@@ -19,9 +19,11 @@ export const Navbar = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
-    window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
-    return () => window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
